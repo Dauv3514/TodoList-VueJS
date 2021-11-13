@@ -9,6 +9,9 @@
   <AddTask @add-task="addTask" />
   </div>
   <Tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask" :tasks="tasks"/>
+  <div class="modal">
+  <contenu></contenu>
+  </div>
 </div>
 </template>
 
@@ -16,13 +19,15 @@
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
+import Contenu from './components/Contenu'
 
 export default {
   name: 'App',
   components: {
     Header,
     Tasks,
-    AddTask
+    AddTask,
+    Contenu,
   },
   data() {
     return {
